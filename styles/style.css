@@ -41,7 +41,7 @@ blockquote {
     padding: 24px 20px;
     display: flex;
     width: 360px;
-    height: 132px;
+    flex-direction: row;
     align-items: flex-start;
     gap: 168px;
     flex-shrink: 0;
@@ -81,17 +81,6 @@ blockquote {
     line-height: 120%;
 }
 
-.header_menu-item_active {
-/* активный пункт меню */
-    color: #F5F5F5;
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 120%;
-    text-decoration: none;
-}
-
 .header_menu-link {
 /* ссылка в пункте меню */
     color: #F5F5F5;
@@ -102,6 +91,17 @@ blockquote {
     line-height: 120%;
     text-decoration:underline;
 }
+
+.header_menu-item_active {
+    /* активный пункт меню */
+        color: #F5F5F5;
+        font-family: 'Inter', sans-serif;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        text-decoration: none;
+    }
 
 .cover {
     background-image: url(/images/cover.svg);
@@ -193,8 +193,7 @@ blockquote {
 .reasons {
     display: flex;
     flex-direction: column;
-    gap: 24px;
-    padding: 40px 20px 40px 20px;
+    padding: 38px 20px 38px 20px;
 }
 
 .content-section_subtitle {
@@ -221,8 +220,6 @@ blockquote {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px;
-    
 }
 
 .content-section_list-item {
@@ -232,9 +229,13 @@ blockquote {
     font-weight: 400;
     line-height: 135%;
     padding-bottom: 16px;
-    padding-left: 20px;
-    padding-right: 20px;
     margin-left: 16px;
+}
+
+li:last-child {
+    padding-right: 0;
+    margin-right: 0;
+    padding-bottom: 0;
 }
 
 .content-section_list-accent {
@@ -284,8 +285,6 @@ blockquote {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    border-radius: 30px;
-    margin-bottom: 8px;
 }
 
 .card_author-name {
@@ -303,14 +302,12 @@ blockquote {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    padding-bottom: 8px;
 }
 
 .card_content {
     /* контейнер для контента карточки */
     display: flex;
     flex-direction: column;
-    border-radius: 30px;
     gap: 8px;
     list-style: none;
 }
@@ -322,7 +319,6 @@ blockquote {
     font-style: normal;
     font-weight: 500;
     line-height: 135%; /* 29.7px */
-    padding-bottom: 8px;
     list-style: none;
 }
 
